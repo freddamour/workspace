@@ -37,12 +37,9 @@ const PageProjetJPO = () => {
       });
   }, []);
 
-  const projetsFiltres ({filtre}) =>{
-
-    donnees.filter((enregistrement) =>
-      enregistrement.Nom.toLowerCase().includes(filtre.toLowerCase())
-    );
-  } 
+  const projetsFiltres = donnees.filter((enregistrement) =>
+    enregistrement.Nom.toLowerCase().includes(filtre.toLowerCase())
+  );
 
   if (enChargement)
     return <div className="text-white">Chargement en cours...</div>;
